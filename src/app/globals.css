@@ -1,27 +1,33 @@
+/* Tailwind base, components, utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.Text-Style-1 {
+  @apply font-exo2 text-[48px] font-normal leading-[1.5] tracking-[-0.72px] text-left text-black;
+}
+.Text-Style-2 {
+  @apply font-mont text-[24px] font-bold leading-[1.5] tracking-[-0.36px] text-left text-black;
+}
+.Text-Style-3 {
+  @apply font-mont text-[18px] font-normal leading-[1.67] tracking-[-0.27px] text-left text-black-opacity-80;
+}
+.Text-Style-4 {
+  @apply font-exo2 text-[18px] font-bold leading-[1.67] tracking-[-0.27px] text-left text-custom-blue;
+}
+.Text-Style-5 {
+  @apply font-mont text-[24px] font-bold leading-[1.5] tracking-[-0.36px] text-center text-white;
+}
+.Text-Style-6 {
+  @apply font-mont text-[18px] font-normal leading-[1.67] tracking-[-0.27px] text-center text-white-opacity-80;
+}
+.Text-Style-7 {
+  @apply font-mont text-[14px] font-normal leading-[1.57] tracking-[-0.21px] text-center text-white-opacity-60;
+}
+.Text-Style-8 {
+  @apply font-mont text-[14px] font-normal leading-[1.57] tracking-[-0.21px] text-center text-white-opacity-60;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
