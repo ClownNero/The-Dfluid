@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import IndianaDragScroll from "react-indiana-drag-scroll";
+import { ScrollContainer } from "react-indiana-drag-scroll";
 import Image from "next/image";
 import { Card } from "@/utils/card";
 
@@ -12,7 +12,7 @@ interface HorizontalScrollProps {
 
 export default function HorizontalScroll({ cards }: HorizontalScrollProps) {
   return (
-    <IndianaDragScroll className="flex overflow-x-auto scrollbar-hide ml-[80px] cursor-grab gap-[40px]">
+    <ScrollContainer className="flex overflow-x-auto scrollbar-hide ml-[80px] cursor-grab gap-[40px]">
       {cards.length > 0 ? (
         cards.map((card) => (
           <article
@@ -33,7 +33,7 @@ export default function HorizontalScroll({ cards }: HorizontalScrollProps) {
                 src={card.image}
                 alt={card.name}
                 width={360}
-                height={227.1}
+                height={227}
               />
             </div>
             <p className="w-[357px] h-[101px] font-mont text-[14px] font-normal leading-[1.2] tracking-[-0.32px] text-left text-black mt-[19px] overflow-hidden whitespace-normal ml-[3px] line-clamp-6">
@@ -48,6 +48,6 @@ export default function HorizontalScroll({ cards }: HorizontalScrollProps) {
           </p>
         </article>
       )}
-    </IndianaDragScroll>
+    </ScrollContainer>
   );
 }
